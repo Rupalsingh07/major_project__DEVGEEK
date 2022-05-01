@@ -18,9 +18,7 @@
                 <input type="email" class="form-control" id="email" formControlName="email">
                  <div *ngIf="loginForm.get('email').errors&&(loginForm.get('email').touched&&loginForm.get('email').invalid)" class="err">
                   <div *ngIf="loginForm.get('email').errors?.['required']">This field is required</div>
-                  <div  *ngIf="loginForm.errors && loginForm.errors?.['pattern']">
-                    Email is invalid
-                </div>
+                  <div  *ngIf="loginForm.get('email').errors?.['pattern']">Email is invalid</div>
                 
                 </div>
               </div>
